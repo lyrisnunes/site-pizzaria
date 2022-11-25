@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;800&display=swap');
+
+:root{
+   --red:#e74c3c;
+   --black:#333;
+   --white:#fff;
+   --light-bg:#f5f5f5;
+   --light-color:#666;
+   --border:.1rem solid var(--light-color);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+   font-family: 'Nunito', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   transition: .2s linear; 
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+.header{
+    display: flex;
+    justify-content:space-between ;
+    flex-wrap: wrap;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    padding: 1.3rem 6rem;
+    align-items: center;
+}
+
+.logo{
+    font-size: 1.3rem;
+    color:var(--black);
+}
+
+.header-menu{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    
+}
+
+.header-menu a{
+    margin:0 1rem;
+    font-size: 1.3rem;
+    color:var(--light-color);
+
+}
+
+.header-menu a:hover{
+    color: var(--red);
+}
+
+.icone{
+    font-size: 1.3rem;
+    display: flex;
+    gap: 20px;
+    color:var(--light-color);
+}
+
+.icone div:hover{
+    color: var(--red);
+}
+
+
+@media (max-width:1027px){
+    .icone{
+        display: none;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-menu
+}
+
+@media (max-width:580px){
+    .header{
+        padding: 1.3rem 1rem;
+    }
+
+    .header-menu a{
+        font-size: 1rem;
+    }
+}
+
+/***/
+
+.fundo{
+    background: url(images/home-bg.jpg)no-repeat center;
+    background-size: cover;
+    height: 100%;
+    padding: 2rem 0;
+}
+
+.conteudo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    text-align: center;
+}
+
+.conteudo h1{
+    font-size: 5rem;
+    color: var(--white);
+}
+
+.conteudo h2{
+    color: var(--white);
+}
+
+.conteudo img{
+    display: block;
+    max-width: 100%;
+}
+
+@media (max-width:1001px){
+
+    .fundo{
+        padding-top: 2rem;
+       }
+
+
+    .conteudo h1{
+        font-size: 3rem;
+        color: var(--white);
+    }
+
+}
+
+
+@media (max-width:340px){
+    .fundo{
+        padding-top: 2rem;
+       }
+
+
+    .conteudo h1{
+        font-size: .9rem;
+        color: var(--white);
+    }
+
+  
+}
+
+/**/
+
+.sobre{
+    background-color: rgba(102, 102, 102, 0.074);
+    text-align: center;
+}
+
+.sobre .sobre-titulo{
+    color: var(--black);
+    font-size: 3rem;
+    padding: 2rem;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.container .box{
+    display: grid;
+    background-color: var(--white);
+    gap: 20px;
+    border-radius: .5rem;
+    padding:1rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.box h3{
+    font-size: 1.5rem;
+}
+
+.botao{
+    background-color: var(--red);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+
+
+@media (max-width:1140px){
+
+    .container{
+        padding: 0 2rem;
+    }
+
+}
+
+@media (max-width:850px){
+
+    .sobre .sobre-titulo{
+        font-size: 2rem;
+    }
+
+    .container{
+        grid-template-columns: 1fr 1fr; 
+        padding: 0 2rem;
+    }
+
+    .box h3{
+        font-size: 1.1rem;
+    }
+
+    .botao{
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width:509px){
+
+    .container{
+        padding: 0 .7rem;
+        grid-template-columns: 1fr 1fr; 
+        
+    }
+
+}
+
+@media (max-width:400px){
+
+    .container{
+        padding: 0 .7rem;
+        grid-template-columns: 1fr ; 
+        
+    }
+
+    .botao{
+        padding: 1rem ;
+        font-size: 1rem;
+    }
+
+}
+
+/**/
+
+.menu{
+    background-color: rgba(102, 102, 102, 0.074);
+    text-align: center;
+
+}
+
+.menu-titulo{
+    color: var(--black);
+    font-size: 3rem;
+    padding: 2rem;
+}
+
+.box-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    border-radius: .5rem;
+    padding:1rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.box-container .box{
+    display: grid;
+    gap: 5px;
+    box-shadow: var(--box-shadow);
+    background-color: var( --white) ;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.box .avaliacao{
+    font-size: .9rem;
+    color: orangered;
+    
+}
+
+.box .pedir{
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 4px;
+    padding: .2rem;
+}
+
+
+@media (max-width:720px){
+
+    .menu-titulo{  
+        font-size: 2rem;  
+    }
+
+    .box-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        padding:1rem;
+        
+    }
+
+}
+
+@media (max-width:720px){
+
+    .box-container{
+        grid-template-columns: 1fr 1fr;
+        padding:1rem;
+        
+    }
+
+}
+
+@media (max-width:299px){
+
+    .box-container{
+        grid-template-columns: 1fr;
+        padding:1rem;
+        
+    }
+
+}
+/**/
+
+
+.footer{
+    text-align: center; 
+    background-color: rgba(102, 102, 102, 0.074);
+}
+
+.contato-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    border-radius: .5rem;
+    padding:1rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contato-container .box1{
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   padding: 2rem;
+   display: grid;
+   gap: 10px;
+}
+
+.box1 i{
+   color: var(--red);
+    font-size: 3rem;
+}
+
+.credito{
+    border-top: 1px solid black;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-top: 50px;
+    font-size: 1.5rem;
+}
+
+
+@media (max-width:751px){
+
+    .contato-container .box1{
+        padding: 1rem;
+     }
+
+    .contato-container{
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .box1 i{
+         font-size: 2rem;
+     }
+
+}
+
+@media (max-width:500px){
+    .contato-container{
+        grid-template-columns: repeat(1,1fr);
+    }  
+
+    .credito{
+        border-top: 1px solid black;
+        font-size: 1rem;
+    }
+    
+}
